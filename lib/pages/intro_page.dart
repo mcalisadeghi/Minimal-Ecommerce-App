@@ -11,7 +11,7 @@ class IntroPage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: <Widget>[
             // logo
             Icon(
               Icons.shopping_bag,

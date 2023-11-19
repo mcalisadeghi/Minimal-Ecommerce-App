@@ -19,19 +19,34 @@ class ShopPage extends StatelessWidget {
         title: const Text(
           'Shop Page',
         ),
+        actions: [
+          // go to cart button
+          IconButton(
+            onPressed: () => Navigator.popAndPushNamed(
+              context,
+              '/cart_page',
+            ),
+            icon: const Icon(
+              Icons.shopping_cart_outlined,
+            ),
+          ),
+        ],
       ),
       drawer: const MyDrawer(),
       backgroundColor: Theme.of(context).colorScheme.background,
       body: ListView(
-        children: [
-          SizedBox(
+        children: <Widget>[
+          const SizedBox(
             height: 25.0,
           ),
           // shop subtitle
-          Text(
-            'Pic from a selected list of premium products',
-            style: TextStyle(
-              color: Theme.of(context).colorScheme.inversePrimary,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              'Pic from a selected list of premium products',
+              style: TextStyle(
+                color: Theme.of(context).colorScheme.inversePrimary,
+              ),
             ),
           ),
 
@@ -41,7 +56,7 @@ class ShopPage extends StatelessWidget {
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: products.length,
-              padding: EdgeInsets.all(
+              padding: const EdgeInsets.all(
                 15.0,
               ),
               itemBuilder: (context, index) {

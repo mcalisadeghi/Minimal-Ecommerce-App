@@ -10,9 +10,9 @@ class MyDrawer extends StatelessWidget {
       backgroundColor: Theme.of(context).colorScheme.background,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
+        children: <Widget>[
           Column(
-            children: [
+            children: <Widget>[
               // drawer header: logo
               DrawerHeader(
                 child: Center(
